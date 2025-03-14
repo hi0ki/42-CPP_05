@@ -17,5 +17,10 @@
 			
 			std::string getName() const;
 			int getGrade() const;
+
+			void incrementGrade();
+			void decrementGrade();
 	};
+
+	std::ostream &operator<<(std::ostream &out, Bureaucrat &obj);
 #endif

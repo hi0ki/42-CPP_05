@@ -3,14 +3,8 @@
 
 int main()
 {
-	try
-	{
-		Bureaucrat b1("b1", 10);
-	}
-	catch ()
-	{
-		std::cout << e.what() << '\n';
-	}
-
+	Bureaucrat b1("b1", 2);
+	b1.decrementGrade();
+	std::cout << b1 << std::endl;
 	return 0;
 }
