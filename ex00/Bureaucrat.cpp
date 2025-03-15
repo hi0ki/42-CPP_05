@@ -4,6 +4,7 @@ Bureaucrat::Bureaucrat() : name("def_name"), grade(1)
 {
 	std::cout << "Bureaucrat default constructor called" << std::endl;
 }
+
 Bureaucrat::Bureaucrat(std::string name, int grade) : name(name)
 {
 	if (grade < 1)
@@ -18,6 +19,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &obj) : name(obj.name) , grade(obj.grade
 {
 	std::cout << "Bureaucrat copy constructor called" << std::endl;
 }
+
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &obj)
 {
 	std::cout << "Bureaucrat assignation operator called" << std::endl;
