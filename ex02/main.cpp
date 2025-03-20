@@ -10,7 +10,7 @@ int main()
 	try
 	{
 		ShrubberyCreationForm form("shrubbery");
-		Bureaucrat bur("bureaucrat", 120);
+		Bureaucrat bur("bureaucrat", 100);
 
 		bur.signForm(form);
 		form.execute(bur);
