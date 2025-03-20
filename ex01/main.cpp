@@ -7,8 +7,8 @@ int main()
 
 	try 
 	{
-		Form form("form", 1, 1);
-		const Bureaucrat bureaucrat("bureaucrat1", 10);
+		Form form("form", 1, 10);
+		const Bureaucrat bureaucrat("bureaucrat1", 1);
 		bureaucrat.signForm(form);
 		form.beSigned(bureaucrat);
 		std::cout << "------------\n";
