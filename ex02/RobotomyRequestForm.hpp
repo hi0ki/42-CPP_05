@@ -12,7 +12,7 @@
 			RobotomyRequestForm(std::string target);
 			RobotomyRequestForm(const RobotomyRequestForm &obj);
 			RobotomyRequestForm &operator=(const RobotomyRequestForm &obj);
-			void execute(const Bureaucrat &executor) const;
+			void execute(Bureaucrat const & executor) const;
 			~RobotomyRequestForm();
 	};
 

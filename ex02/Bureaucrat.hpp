@@ -21,16 +21,20 @@
 			Bureaucrat(const Bureaucrat &obj);
 			~Bureaucrat();
 
+			// assignation operator overload
 			Bureaucrat &operator=(const Bureaucrat &obj);
 			
+			// getters
 			std::string getName() const;
 			int getGrade() const;
 
+			// methods
 			void incrementGrade();
 			void decrementGrade();
-
 			void signForm(AForm &form) const;
 			void executeForm(AForm const & form) const;
+
+			// exceptions
 			class GradeTooHighException : public std::exception{
 				public:
 					virtual const char *what() const throw();

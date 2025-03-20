@@ -14,7 +14,7 @@
 			PresidentialPardonForm(PresidentialPardonForm &obj);
 			~PresidentialPardonForm();
 
-			void execute(const Bureaucrat&executor) const;
+			void execute(Bureaucrat const & executor) const;
 
 			PresidentialPardonForm &operator=(const PresidentialPardonForm &obj);
 	};
