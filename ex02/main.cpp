@@ -14,6 +14,7 @@ int main()
 
 		bur.signForm(form);
 		form.execute(bur);
+		std::cout << form;
 	}
 	catch(const std::exception& e)
 	{

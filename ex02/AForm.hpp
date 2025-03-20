@@ -18,37 +18,37 @@
 			AForm(const AForm &form);
 			~AForm();
 
-		// operator
-		AForm &operator=(AForm const &form);
+			// operator
+			AForm &operator=(AForm const &form);
 
-		// getters
-		std::string get_name() const;
-		bool get_isSigned() const;
-		int get_requiredGrade() const;
-		int get_requiredExecGrade() const;
+			// getters
+			std::string get_name() const;
+			bool get_isSigned() const;
+			int get_requiredGrade() const;
+			int get_requiredExecGrade() const;
 
-		// methods
-		void beSigned(const Bureaucrat &bureaucrat);
-		virtual void execute(Bureaucrat const & executor) const = 0;
+			// methods
+			void beSigned(const Bureaucrat &bureaucrat);
+			virtual void execute(Bureaucrat const & executor) const = 0;
 
-		// exceptions
-		class GradeTooHighException : public std::exception
-		{
-			public:
-				virtual const char *what() const throw();
-		};
+			// exceptions
+			class GradeTooHighException : public std::exception
+			{
+				public:
+					virtual const char *what() const throw();
+			};
 
-		class GradeTooLowException : public std::exception
-		{
-			public:
-				virtual const char *what() const throw();
-		};
+			class GradeTooLowException : public std::exception
+			{
+				public:
+					virtual const char *what() const throw();
+			};
 
-		class FormNotSignedException : public std::exception
-		{
-			public:
-				virtual const char *what() const throw();
-		};
+			class FormNotSignedException : public std::exception
+			{
+				public:
+					virtual const char *what() const throw();
+			};
 	};
 
 	std::ostream &operator<<(std::ostream &out, const AForm &obj);
