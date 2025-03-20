@@ -70,7 +70,7 @@ bool Form::get_isSigned() const
 
 // methods
 
-void Form::beSigned(Bureaucrat &bureaucrat)
+void Form::beSigned(const Bureaucrat &bureaucrat)
 {
 	if (bureaucrat.getGrade() <= requiredGrade)
 	{

@@ -28,7 +28,7 @@
 		int get_requiredExecGrade() const;
 
 		// methods
-		void beSigned(Bureaucrat &bureaucrat);
+		void beSigned(const Bureaucrat &bureaucrat);
 
 		// exceptions
 		class GradeTooHighException : public std::exception
