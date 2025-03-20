@@ -18,7 +18,7 @@ $(NAME): $(OBJ) $(HEADERS)
 	$(C++) -c $< -o $@
 
 clean:
-	rm -rf $(OBJ)
+	rm -rf $(OBJ) *_shrubbery
 
 fclean: clean
 	rm -rf $(NAME)

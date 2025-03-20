@@ -2,7 +2,14 @@
 	#define BUREAUCRAT_HPP
 
 	#include <iostream>
-	// #include "Form.hpp"
+	#include "AForm.hpp"
+	
+	#define DEBUG 1
+	#define RED "\033[0;31m"
+	#define GREEN "\033[1;32m"
+	#define RESET "\033[0m"
+
+	class AForm;
 
 	class Bureaucrat{
 		private:
@@ -22,8 +29,8 @@
 			void incrementGrade();
 			void decrementGrade();
 
-			// void signForm(Form &form);
-
+			void signForm(AForm &form) const;
+			void executeForm(AForm const & form) const;
 			class GradeTooHighException : public std::exception{
 				public:
 					virtual const char *what() const throw();
