@@ -16,7 +16,7 @@
 			AForm();
 			AForm(std::string name, int requiredGrade, int requiredExecGrade);
 			AForm(const AForm &form);
-			~AForm();
+			virtual ~AForm();
 
 			// operator
 			AForm &operator=(AForm const &form);

@@ -1,55 +1,25 @@
 
-#include "AForm.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int main()
 {
-	// ShrubberyCreationForm
+	AForm* rrf = NULL;
 	try
 	{
-		ShrubberyCreationForm form("shrubbery");
-		Bureaucrat bur("bureaucrat", 100);
-
-		bur.signForm(form);
-		form.execute(bur);
-		std::cout << form;
+		Bureaucrat br("mehdi", 2);
+		Intern someRandomIntern;
+		rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
+		if (rrf)
+		{
+			rrf->beSigned(br);
+			rrf->execute(br);
+			delete rrf;
+		}
 	}
-	catch(const std::exception& e)
+	catch (std::exception &e)
 	{
-		std::cerr << RED << e.what() << '\n' << RESET;
+		std::cout << RED << e.what() << RESET << std::endl;
+		delete rrf;
 	}
-
-	// RobotomyRequestForm
-	std::cout << "-------------------------------------" << std::endl;
-	try
-	{
-		RobotomyRequestForm form("robotomy");
-		const Bureaucrat bur("bureaucrat", 40);
-
-		bur.signForm(form);
-		form.execute(bur);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << RED << e.what() << '\n' << RESET;
-	}
-
-	// PresidentialPardonForm
-	std::cout << "-------------------------------------" << std::endl;
-	try
-	{
-		PresidentialPardonForm form("rajol");
-		const Bureaucrat bur("bureaucrat", 4);
-
-		form.beSigned(bur);
-		bur.executeForm(form);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << RED << e.what() << '\n' << RESET;
-	}
-
 	return 0;
 }

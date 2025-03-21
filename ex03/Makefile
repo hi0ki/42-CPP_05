@@ -1,13 +1,14 @@
 C++ = c++ -Wall -Wextra -Werror
 
 SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp \
-		RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+		RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 
 NAME = program
 
 OBJ = $(SRC:.cpp=.o)
 
-HEADERS = Bureaucrat.hpp AForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp
+HEADERS = Bureaucrat.hpp AForm.hpp ShrubberyCreationForm.hpp \
+			RobotomyRequestForm.hpp PresidentialPardonForm.hpp Intern.hpp
 
 ALL: $(NAME)
 
