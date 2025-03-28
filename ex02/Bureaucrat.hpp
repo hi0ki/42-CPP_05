@@ -2,9 +2,15 @@
 	#define BUREAUCRAT_HPP
 
 	#include <iostream>
-	#include "Form.hpp"
+	#include "AForm.hpp"
+	
+	#define DEBUG 1
+	#define RED "\033[0;31m"
+	#define GREEN "\033[1;32m"
+	#define RESET "\033[0m"
 
-	class Form;
+	class AForm;
+
 	class Bureaucrat{
 		private:
 			const std::string name;
@@ -15,16 +21,20 @@
 			Bureaucrat(const Bureaucrat &obj);
 			~Bureaucrat();
 
+			// assignation operator overload
 			Bureaucrat &operator=(const Bureaucrat &obj);
 			
+			// getters
 			std::string getName() const;
 			int getGrade() const;
 
+			// methods
 			void incrementGrade();
 			void decrementGrade();
+			void signForm(AForm &form) const;
+			void executeForm(AForm const & form) const;
 
-			void signForm(Form &form) const;
-
+			// exceptions
 			class GradeTooHighException : public std::exception{
 				public:
 					virtual const char *what() const throw();
